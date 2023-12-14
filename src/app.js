@@ -2,7 +2,7 @@ const express = require('express');
 const ProductManager = require('./product-manager.js');
 
 const app = express();
-const port = 8080;
+const PORT = 8080;
 
 const manager =  new ProductManager("./src/productos.json");
 
@@ -35,6 +35,6 @@ app.get('/products/:pid', async (req, res) => {
      } 
 });
 
-app.listen(port, () => {
-  console.log(`Servidor Express escuchando en el puerto ${port}`);
+app.listen(PORT, () => {
+  console.log(`Servidor Express escuchando en el puerto ${PORT}`);
 });
