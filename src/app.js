@@ -36,5 +36,7 @@ app.get('/products/:pid', async (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor Express escuchando en el puerto ${PORT}`);
+  console.log(
+    `Servidor Express escuchando en el puerto http://localhost:8080  ${PORT}`
+  );
 });
