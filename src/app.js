@@ -4,6 +4,7 @@ const ProductManager = require('./product-manager.js');
 const app = express();
 const PORT = 8080;
 
+//Creamos instancia de la Clase Product Manager
 const manager =  new ProductManager("./src/productos.json");
 
 // Ruta para obtener todos los productos con límite 
@@ -37,6 +38,6 @@ app.get('/products/:pid', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(
-    `Servidor Express escuchando en el puerto http://localhost:8080  ${PORT}`
+    `Servidor Express escuchando en el puerto http://localhost:${PORT}/products`
   );
 });
