@@ -7,7 +7,7 @@ const PORT = 8080;
 //Creamos instancia de la Clase Product Manager
 const manager =  new ProductManager("./src/productos.json");
 
-// Ruta para obtener todos los productos con límite 
+// Obtener productos con límite 
 app.get('/products', async (req, res) => {
     try{
         const limit = req.query.limit;
@@ -15,11 +15,11 @@ app.get('/products', async (req, res) => {
         res.json({ products: productos });
     } catch (error){
         console.log("Error al obtener productos:",error);
-        res.status(500).json({error: "Error interno del seridor"});
+        res.status(500).json({error: "Error interno del servidor"});
     }    
 });
 
-// Ruta para obtener un producto por ID
+// Obtener un producto por ID
 app.get('/products/:pid', async (req, res) => {
     try{
         const productId = parseInt(req.params.pid);
